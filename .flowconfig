@@ -1,0 +1,10 @@
+[ignore]
+
+[libs]
+flow-typed/
+
+[include]
+src/
+
+[options]
+module.name_mapper='^gtag\/\(.*\)$' -> '<PROJECT_ROOT>/src/gtag/\1'

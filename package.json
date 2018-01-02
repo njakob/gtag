@@ -1,0 +1,44 @@
+{
+  "name": "@njakob/gtag",
+  "version": "0.0.0",
+  "description": "Simple Google Analytics wrapper for Redux",
+  "author": "Nicolas Jakob <nicow.jakob@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/njakob/gtag",
+  "repository": "njakob/gtag.git",
+  "bugs": {
+    "url": "https://github.com/njakob/gtag/issues"
+  },
+  "main": "lib/gtag.js",
+  "module": "lib/gtag.es.js",
+  "jsnext:main": "lib/gtag.es.js",
+  "scripts": {
+    "release:build": "scribe build -s ./src/gtag/index.js -o ./lib/",
+    "release:prepare": "scribe prepare",
+    "release:publish": "scribe publish",
+    "release": "npm run release:build && npm run prepare && npm run publish"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.36",
+    "@babel/preset-es2015": "^7.0.0-beta.36",
+    "@babel/preset-flow": "^7.0.0-beta.36",
+    "@babel/preset-react": "^7.0.0-beta.36",
+    "@njakob/eslint-config": "^6.0.1",
+    "@njakob/scribe": "^0.0.1",
+    "babel-eslint": "^8.1.2",
+    "babel-plugin-module-resolver": "^3.0.0",
+    "eslint": "^4.9.0",
+    "eslint-import-resolver-babel-module": "^3.0.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "flow-bin": "^0.61.0",
+    "react": "^16.2.0",
+    "redux": "^3.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "redux": "^3.7.0"
+  }
+}
